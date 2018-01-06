@@ -2,4 +2,9 @@ AddDefaultCharset utf-8
 
 RewriteEngine on
 RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^template/([a-z]+)/(.*)$ template/$1/$2 [L]
+
 RewriteRule ^(.*)$ index.php
