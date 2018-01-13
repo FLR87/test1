@@ -14,7 +14,6 @@ class News
             $result->setFetchMode(PDO::FETCH_ASSOC);
 
             $newsItem = $result->fetch();
-
             return $newsItem;
         }
     }
